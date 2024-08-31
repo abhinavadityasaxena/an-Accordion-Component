@@ -1,0 +1,87 @@
+/* Base styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Accordion Container */
+.accordion {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Accordion Item */
+.accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* Accordion Header */
+.accordion-header {
+  padding: 18px 20px;
+  background-color: #0077cc;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s, padding 0.3s;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header:hover {
+  background-color: #005fa3;
+  padding-left: 25px;
+}
+
+/* Accordion Content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.3s ease;
+  padding: 0 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Adding padding when active */
+.accordion-content.active {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Accordion Content Text */
+.accordion-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .accordion-header {
+      font-size: 1rem;
+  }
+  .accordion-content p {
+      font-size: 0.9rem;
+  }
+}
